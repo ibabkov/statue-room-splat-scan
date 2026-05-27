@@ -1,13 +1,6 @@
-`# APP_TITLE
+# Philip V Statue Room Splat Scan
 
-APP_DESCRIPTION
-
-## Before starting
-
-- Remove all TODOs
-- Change APP_TITLE, APP_DESCRIPTION in README.md
-- Change name in package.json
-- Remove this section
+Photorealistic Gaussian Splat scan of a museum room with the statue of Philip V at the center and rendered with a custom focus shader.
 
 ## Getting Started
 
