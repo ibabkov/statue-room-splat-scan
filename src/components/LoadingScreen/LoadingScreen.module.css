@@ -1,0 +1,61 @@
+.container {
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 18px;
+	background-color: var(--primary-color);
+	opacity: 1;
+	transition: opacity 1.2s ease;
+}
+
+.container[data-active='false'] {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.title {
+	margin: 0;
+	font-size: 15px;
+	letter-spacing: 0.32em;
+	text-transform: uppercase;
+	color: var(--title-color);
+	animation: pulse 2.4s ease-in-out infinite;
+}
+
+.bar {
+	position: relative;
+	width: min(240px, 60vw);
+	height: 2px;
+	background-color: rgba(255, 255, 255, 0.12);
+	overflow: hidden;
+}
+
+.fill {
+	position: absolute;
+	inset: 0 auto 0 0;
+	background-color: var(--accent-color);
+	transition: width 0.25s ease;
+}
+
+.percent {
+	margin: 0;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	color: var(--text-color);
+	font-variant-numeric: tabular-nums;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 0.55;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}

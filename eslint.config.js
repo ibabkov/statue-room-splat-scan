@@ -23,6 +23,7 @@ export default tseslint.config(
 			'@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 			'newline-before-return': 'error',
 			'comma-dangle': ['error', 'always-multiline'],
+			'id-length': ['error', { min: 3, exceptions: ['_'] }],
 		},
 	},
 	prettierConfig,

@@ -1,0 +1,37 @@
+.container {
+	position: absolute;
+	inset: auto 0 0 0;
+	z-index: 5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+	padding: 0 24px 28px;
+	pointer-events: none;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
+}
+
+.hint {
+	font-size: 12px;
+	letter-spacing: 0.18em;
+	text-transform: lowercase;
+	color: var(--text-color);
+	opacity: 0.9;
+	/* Hold for the delay, then fade out and stay hidden. */
+	animation: hintFade 1.2s ease var(--fade-delay) forwards;
+}
+
+@keyframes hintFade {
+	to {
+		opacity: 0;
+	}
+}
+
+.label {
+	font-size: 14px;
+	letter-spacing: 0.34em;
+	text-transform: uppercase;
+	color: var(--title-color);
+	border-top: 1px solid var(--accent-color);
+	padding-top: 12px;
+}
