@@ -1,0 +1,25 @@
+'use client';
+
+import { Component } from 'react';
+import type { ReactNode } from 'react';
+
+export type ErrorBoundaryProps = {
+	children: ReactNode;
+	fallback: ReactNode;
+};
+
+type ErrorBoundaryState = {
+	hasError: boolean;
+};
+
+export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+	state: ErrorBoundaryState = { hasError: false };
+
+	static getDerivedStateFromError(): ErrorBoundaryState {
+		return { hasError: true };
+	}
+
+	render() {
+		return this.state.hasError ? this.props.fallback : this.props.children;
+	}
+}

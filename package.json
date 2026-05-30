@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"build": "next build --webpack",
-		"start:dev": "next dev --webpack",
+		"start:dev": "next dev --webpack --experimental-https",
 		"start:prod": "next start",
 		"lint": "eslint",
 		"prepare": "husky",
@@ -18,14 +18,19 @@
 		"update": "npx ncu"
 	},
 	"dependencies": {
+		"@react-three/drei": "^10.7.7",
+		"@react-three/fiber": "^9.6.1",
+		"@sparkjsdev/spark": "^0.1.10",
 		"next": "^16.2.6",
 		"react": "^19.2.6",
-		"react-dom": "^19.2.6"
+		"react-dom": "^19.2.6",
+		"three": "^0.180.0"
 	},
 	"devDependencies": {
 		"@types/node": "^25.8.0",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
+		"@types/three": "^0.180.0",
 		"@typescript-eslint/eslint-plugin": "^8.59.3",
 		"@typescript-eslint/parser": "^8.59.3",
 		"eslint": "^9.39.4",
